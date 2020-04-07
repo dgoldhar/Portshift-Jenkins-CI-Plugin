@@ -41,6 +41,16 @@ For Pipeline jobs, the build step to scan the image with Portshift is included i
 
 ![](images/Jenkins-build-pipeline.png)
 
+### Build control based on Severity level
+
+You can set a maximum permitted severity level for the image. If vulnerabilities are found in the image that exceed this level, the build will fail. 
+If the value is not set, there are no restrictions (the build will not be failed).
+
+Select the level in the build stage:
+
+![](images/Jenkins-build-severity-level.png)
+
+
 ## Plugin output
 
 You can see the results of the scan in the Console Output.
@@ -48,7 +58,6 @@ You can see the results of the scan in the Console Output.
 ![](images/Jenkins-console-output.png)
 
 You can also see results of the scan as an HTML page. An artifact named *scanResults.html* is created in the project workspace. In the Jenkins build menu, select Portshift Vulnerability Scanner, and then select the job whose results you wish to see.
-
 
 
 ## Build the plugin (instructions for Ubuntu)
